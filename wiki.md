@@ -23,6 +23,7 @@ OpenStreetMap emphasizes local knowledge. Contributors use aerial imagery, GPS d
 - [Google Map Maker](https://en.wikipedia.org/wiki/Google_Map_Maker) – Collaborative mapping tool
 
 ## References
-1. OpenStreetMap Foundation: https://osmfoundation.org/  
-2. OpenStreetMap Copyright and License: https://www.openstreetmap.org/copyright
-3. Open Database License: https://opendatacommons.org/licenses/odbl/ 
+1. **OpenStreetMap**: https://www.openstreetmap.org 
+2. **OpenStreetMap Foundation**: https://osmfoundation.org/  
+3. **OpenStreetMap Copyright and License**: https://www.openstreetmap.org/copyright
+4. **Open Database License**: https://opendatacommons.org/licenses/odbl/ 
