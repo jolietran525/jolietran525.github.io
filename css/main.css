@@ -16,6 +16,10 @@
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
+    background: #cfb157; 
+  }
+
+  ::-webkit-scrollbar-thumb:active {
     background: #ffc107; 
   }
   
