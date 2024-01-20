@@ -8804,16 +8804,23 @@ h1, h2, h3, h4, h5,
   -ms-border-radius: 5px;
   border-radius: 5px; }
   .resume-wrap .date {
-    font-weight: 900;
-    font-size: 26px;
+    font-weight: 700;
+    font-size: 20px;
     color: #ffbd39; }
   .resume-wrap h2 {
     font-size: 26px; }
+  .resume-wrap h3 {
+      font-size: 23px; }
   .resume-wrap .position {
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 3px;
     text-transform: uppercase; }
+  .resume-wrap .card-header:hover {
+    background: rgba(255, 255, 255, 0.1); }
+    /* .resume-wrap .card-header:hover .date,
+    .resume-wrap .card-header:hover .position {
+      color: #000000; } */
 
 .services-1 {
   margin-bottom: 40px;
@@ -8970,7 +8977,7 @@ h1, h2, h3, h4, h5,
     bottom: 0;
     content: '';
     opacity: 0;
-    background: #ffbd39;
+    background: #554d56;
     z-index: -1;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -8979,9 +8986,9 @@ h1, h2, h3, h4, h5,
     transition: all 0.3s ease; }
     @media (max-width: 767.98px) {
       .project .overlay {
-        opacity: .2; } }
+        opacity: 0.75; } }
   .project .text {
-    max-width: 80%;
+    max-width: 90%;
     z-index: 1;
     opacity: 0;
     -moz-transition: all 0.3s ease;
@@ -8994,20 +9001,34 @@ h1, h2, h3, h4, h5,
       .project .text h3 a {
         color: #fff; }
     .project .text span {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(0, 0, 0, 1);
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 12px;
-      font-weight: 600; }
+      font-weight: 650; }
+    .project .text p {
+        color: rgba(255, 255, 255, 1);
+        font-size: 12px;
+        font-weight: 500; }
+    .project .text .icon {
+      font-size: 20px; }
+      .project .text .icon a {
+        padding-inline: 5px; }
+        .project .text .icon a i {
+          color: rgba(255, 255, 255, 1); }
     @media (max-width: 767.98px) {
       .project .text {
         opacity: 1; }
         .project .text span {
-          color: rgba(255, 255, 255, 0.8); } }
+          color: rgba(255, 255, 255, 1); }
+           }
   .project:hover .overlay, .project:focus .overlay {
-    opacity: .9; }
+    opacity: .9;
+    background: #ffbd39;}
   .project:hover .text, .project:focus .text {
     opacity: 1; }
+    .project:hover .text span, .project:hover .text p {
+      color: rgba(0, 0, 0, 1); }
 
 .aside-stretch {
   background: #ffce6c; }
