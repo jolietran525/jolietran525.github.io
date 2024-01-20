@@ -8818,9 +8818,7 @@ h1, h2, h3, h4, h5,
     text-transform: uppercase; }
   .resume-wrap .card-header:hover {
     background: rgba(255, 255, 255, 0.1); }
-    /* .resume-wrap .card-header:hover .date,
-    .resume-wrap .card-header:hover .position {
-      color: #000000; } */
+
 
 .services-1 {
   margin-bottom: 40px;
@@ -9011,9 +9009,9 @@ h1, h2, h3, h4, h5,
         font-size: 12px;
         font-weight: 500; }
     .project .text .icon {
-      font-size: 20px; }
+      font-size: 22px; }
       .project .text .icon a {
-        padding-inline: 5px; }
+        padding-inline: 15px; }
         .project .text .icon a i {
           color: rgba(255, 255, 255, 1); }
     @media (max-width: 767.98px) {
