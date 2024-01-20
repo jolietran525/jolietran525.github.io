@@ -8805,7 +8805,12 @@ h1, h2, h3, h4, h5,
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
-  border-radius: 5px; }
+  border-radius: 5px; 
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
   .resume-wrap .card-header {
     cursor:pointer;
     padding:20px;
@@ -8840,7 +8845,12 @@ h1, h2, h3, h4, h5,
     .resume-wrap .card-header:hover .position {
       color: #fff;}
   .resume-wrap .card-body {
-    padding: 0px 20px 20px 20px; }
+    padding: 0px 20px 20px 20px; 
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
     .resume-wrap .card-body ul {
       font-size: 15.5px;
     }
