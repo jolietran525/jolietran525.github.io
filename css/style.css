@@ -8760,6 +8760,9 @@ h1, h2, h3, h4, h5,
         background: #ffbd39;
         color: #fff; }
 
+.ftco-about {
+  margin-bottom: 40px;
+}
 .ftco-about .img-about {
   width: 100%;
   z-index: 0;
@@ -8798,26 +8801,44 @@ h1, h2, h3, h4, h5,
   width: 100%;
   margin-bottom: 30px;
   background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
+  padding: 0px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px; }
+  .resume-wrap .card-header {
+    cursor:pointer;
+    padding:20px;
+  }
   .resume-wrap .date {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffbd39; }
   .resume-wrap h2 {
     font-size: 26px; }
   .resume-wrap h3 {
-      font-size: 23px; }
+      font-size: 20px;
+      text-transform: uppercase;
+      font-weight: 600; }
   .resume-wrap .position {
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;
     letter-spacing: 3px;
     text-transform: uppercase; }
   .resume-wrap .card-header:hover {
-    background: rgba(255, 255, 255, 0.1); }
+    background: rgb(253, 189, 57, 0.9);}
+    /* rgba(255, 255, 255, 0.1); } */
+    .resume-wrap .card-header:hover .date {
+      color: #fff;}
+    .resume-wrap .card-header:hover h3 {
+      color: #000000;}
+    .resume-wrap .card-header:hover .position {
+      color: #fff;}
+  .resume-wrap .card-body {
+    padding: 0px 20px 20px 20px; }
+    .resume-wrap .card-body ul {
+      font-size: 15.5px;
+    }
 
 
 .services-1 {
