@@ -8809,6 +8809,11 @@ h1, h2, h3, h4, h5,
   .resume-wrap .card-header {
     cursor:pointer;
     padding:20px;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
   .resume-wrap .date {
     font-weight: 700;
@@ -8848,7 +8853,12 @@ h1, h2, h3, h4, h5,
   width: 100%;
   -webkit-box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
   -moz-box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
-  box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17); }
+  box-shadow: 0px 20px 69px -27px rgba(0, 0, 0, 0.17);
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
   .services-1 .icon {
     display: block;
     margin-bottom: 30px; }
