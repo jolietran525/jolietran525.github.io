@@ -6,11 +6,12 @@ var portfolioContent = {
       {
         greeting: "Hello!",
         title: "I'm <span>Jolie Tran</span>",
-        subtitle: "A Geospatial Data Analyst"
+        subtitle: "A data scientist who turns messy transportation and spatial data into tools people can use."
       },
       {
         greeting: "Hello!",
-        title: "I'm a <span>geospatial data analyst</span> based in Seattle, WA"
+        title: "I focus on <span>safety</span>, <span>accessibility</span>, and <span>equity</span>",
+        subtitle: "I work at the intersection of geospatial analysis, data engineering, and human-centered design."
       }
     ],
     image: "images/bg_2.png"
@@ -19,8 +20,17 @@ var portfolioContent = {
   about: {
     image: "images/about.jpg",
     paragraphs: [
-      "Jolie is currently a senior studying Geography: Data Science at the University of Washington. Upon graduation, she will have at least 1 year of experience with data analytics and web development.",
-      "Jolie has a passion in \"cooking up\" the data to create insightful dashboards that can inform authorities to create positive changes in her community, especially in the transportation sector, with the focus on road and safety analysis."
+      "Jolie is currently a M.S. student in Human-Centered Design and Engineering (HCDE) at the University of \
+      Washington, with an expected graduation date of 2028.",
+      "Jolie has been a Transportation Data Scientist at WSP USA Inc. for 2+ years of experience. She specializes \
+      in data processing, data visualization, and data tools development. She works with MPOs, DOTs, and transit \
+      agencies to provide data-driven insights for transportation planning and operations.",
+      "Previously, Jolie got her B.A. in Geography: Data Science at the University of Washington (2024). Upon \
+      graduation, she had at least 1 year of experience with data analytics and web development at the Washington \
+      State Transportation Center (TRAC UW) and a summer internship at UW's Humanities Data Science Summer Institute 2023.",
+      "Jolie has a passion in \"cooking up\" the data to create insightful visualizations and building data tools \
+      (either for the purpose of visualization or analysis or extraction) that can help people make better \
+      decisions and improves efficiency and accuracy in their work."
     ],
     details: [
       { icon: "fa-solid fa-map-pin", text: "Seattle WA" },
@@ -33,6 +43,32 @@ var portfolioContent = {
   resume: {
     entries: [
       {
+        date: "September 2026-June 2028",
+        title: "M.S. in Human-Centered Design and Engineering (HCDE)",
+        organization: "University of Washington",
+        bullets: [
+          "In-major GPA: [in-progress]."
+        ]
+      },
+      {
+        date: "April 2024-September 2026",
+        title: "Data Scientist",
+        organization: "WSP USA Inc.",
+        bullets: [
+          "Built and deployed Python/R automation tools (Shiny, Streamlit, standalone executables) that convert raw \
+          Synchro, IDAX, and VISSIM outputs into analysis-ready datasets, cutting processing time from ~2 days to under \
+          5 minutes per project.",
+          "Designed Python ETL pipelines integrating GTFS, Replica, INRIX, Swiftly, crash, and spatial data into \
+          standardized multimodal databases, cutting data-prep time by ~80% across 15+ studies.",
+          "Replaced WSDOT's legacy Excel tolling reports with a Streamlit dashboard (Pandas, Plotly backend), \
+          automating ingestion and reporting and reducing manual analyst effort by ~80%.",
+          "Automated the crash analysis workflow end to end (cleaning, statistics, visualization) on WSDOT data, \
+          turning multi-week analyses into a process completed in hours and designed to scale across jurisdictions.",
+          "Led crash and safety analysis for 4+ regional safety action plans, building geospatial models and interactive \
+          maps, including tailored tools for Tribal agencies, to identify high-crash corridors and prioritize investments."
+        ]
+      },
+      {
         date: "September 2021-March 2024",
         title: "B.A. in Geography: Data Science",
         organization: "University of Washington",
@@ -43,13 +79,13 @@ var portfolioContent = {
         ]
       },
       {
-        date: "June 2023-Present",
-        title: "GIS Analyst",
+        date: "June 2023-January 2025",
+        title: "Research Engineer",
         organization: "Washington State Transportation Center (TRAC)",
         groups: [
           {
             title: "ORCAnalysis",
-            dates: "Dec 2023 - Present",
+            dates: "Dec 2023 - January 2025",
             bullets: [
               "Implemented robust methods in PostgreSQL to effectively rectify wrongly encoded stops within the ORCA data based on GTFS, ensuring data integrity and accuracy.",
               "Created an interactive map interface and treemap/billboard dashboards, seamlessly integrated with ORCA data, providing a comprehensive visualization of ridership at each stop in adherence to the GTFS standard."
@@ -57,7 +93,7 @@ var portfolioContent = {
           },
           {
             title: "TDEI: OpenSidewalks",
-            dates: "June 2023 - Present",
+            dates: "June 2023 - Jan 2024",
             bullets: [
               "Developed a method for automating sidewalk attributes collection from State and City DOT and feed into the sidewalk data in OpenStreetMap (OSM) using PostgreSQL and PostGIS.",
               "Designed sets of rules in SQL for handling data integration challenges from disparate sources, identifying poorly drawn segments, and generating missing OSM sidewalk networks.",
@@ -70,7 +106,7 @@ var portfolioContent = {
       {
         date: "June 2023-August 2023",
         title: "Social Media Research Intern",
-        organization: "Humanistic Data Science Summer Institute (HDSSI) @ University of Washington",
+        organization: "Humanities Data Science Summer Institute (HDSSI) @ University of Washington",
         bullets: [
           "Collaborated with a multidisciplinary team to conduct a comprehensive analysis of social media conversations on Twitter, focusing on the influence of historical figures in political movements and historical events.",
           "Analyzed an extensive dataset of 3 million tweets spanning from 2007 to 2023, applying advanced data processing techniques using Pandas and Dask libraries in Python. This efficient analysis revealed key trends and patterns.",
@@ -79,7 +115,7 @@ var portfolioContent = {
         ]
       },
       {
-        date: "April 2023-Present",
+        date: "April 2023-March 2024",
         title: "Undergraduate Research Assistant",
         organization: "Laboratory for Auditory Neuroscience and Development (LAND Lab)",
         bullets: [
@@ -89,7 +125,7 @@ var portfolioContent = {
         ]
       }
     ],
-    cv: "assets/JolieTran_GISAnalyst_Resume.pdf"
+    cv: "assets/JolieTran_Resume_202609.pdf"
   },
 
   expertise: [
@@ -113,7 +149,7 @@ var portfolioContent = {
     {
       image: "images/orca-project2.png",
       title: "ORCAnalysis",
-      role: "GIS Analyst @ TRAC",
+      role: "Research Engineer @ TRAC",
       description: "This map, with GTFS data integrated, is built into the existing dashboard to provide more insights into ORCA data for institutions in the ORCA Business Programs.",
       links: [
         { icon: "fa-brands fa-github", href: "https://github.com/jolietran525/trac-orcanalysis" },
@@ -125,7 +161,7 @@ var portfolioContent = {
     {
       image: "images/osw-project.png",
       title: "TDEI: Conflation Review Tool",
-      role: "GIS Analyst @ TRAC",
+      role: "Research Engineer @ TRAC",
       description: "This is a web map interface that facilitates reviewing the results from the OpenSidewalks Conflation project.",
       links: [
         { icon: "fa-brands fa-github", href: "https://github.com/jolietran525/trac-conflation-review-tool" },
@@ -136,7 +172,7 @@ var portfolioContent = {
     {
       image: "images/conflation-project2.png",
       title: "TDEI: OpenSidewalks Conflation",
-      role: "GIS ANALYST @ TRAC",
+      role: "Research Engineer @ TRAC",
       description: "This project automates the sidewalk data collection in OSM by extracting sidewalk attributes from the State & City DOT and feeding into OSM through data integration.",
       links: [
         { icon: "fa-brands fa-github", href: "https://github.com/jolietran525/trac-conflation" },
