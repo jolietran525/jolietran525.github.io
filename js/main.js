@@ -66,7 +66,7 @@
 	var onePageClick = function() {
 
 
-		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
+		$(document).on('click', '#ftco-nav a[href^="#"], #about-section .about-info a[href^="#"]', function (event) {
 	    event.preventDefault();
 
 	    var href = $.attr(this, 'href');
@@ -280,8 +280,9 @@ function initScrollXP() {
 	var xpValue = document.querySelector('#xp-value');
 	var levelValue = document.querySelector('#level-value');
 	var scrollPercent = document.querySelector('#scroll-percent');
+	var runner = document.querySelector('#xp-runner');
 
-	if (!progress || !xpValue || !levelValue || !scrollPercent) {
+	if (!progress || !xpValue || !levelValue || !scrollPercent || !runner) {
 		return;
 	}
 
@@ -292,6 +293,7 @@ function initScrollXP() {
 		var level = Math.min(Math.floor(completion * 9) + 1, 10);
 
 		progress.style.width = (completion * 100) + '%';
+		runner.style.left = (completion * 100) + '%';
 		xpValue.textContent = String(xp).padStart(4, '0');
 		levelValue.textContent = 'LVL ' + String(level).padStart(2, '0');
 		scrollPercent.textContent = Math.round(completion * 100) + '%';

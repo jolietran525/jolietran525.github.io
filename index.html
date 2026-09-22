@@ -26,18 +26,17 @@
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <div class="arcade-progress" aria-live="polite">
       <div class="arcade-progress__label"><span>PLAYER 01</span><span id="level-value">LVL 01</span></div>
-      <div class="arcade-progress__track"><span id="xp-progress"></span></div>
+      <div class="arcade-progress__track"><span id="xp-progress"></span><span id="xp-runner" aria-hidden="true">@</span></div>
       <div class="arcade-progress__meta"><span>XP <strong id="xp-value">0000</strong> / 10000</span><span id="scroll-percent">0%</span></div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Jolie Tran</a>
+        <div class="navbar-profile"><a class="navbar-brand" href="index.html">Jolie Tran</a><button class="mode-toggle mode-toggle-item" id="mode-toggle" type="button" aria-pressed="false"><span class="mode-toggle__icon" id="mode-toggle-check" aria-hidden="true">[x]</span><span id="mode-toggle-label">PRO MODE</span></button></div>
         <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="menu-arrow" aria-hidden="true"></span> Menu</button>
         <div class="collapse navbar-collapse" id="ftco-nav"><ul class="navbar-nav nav ml-auto">
           <li class="nav-item"><a href="#about-section" class="nav-link"><span>ABOUT</span></a></li>
-          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>JOURNEY</span></a></li>
-          <li class="nav-item"><a href="#expertise-section" class="nav-link"><span>LOADOUT</span></a></li>
-          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>STATS</span></a></li>
+          <li class="nav-item nav-journey"><a href="#resume-section" class="nav-link"><span>JOURNEY</span></a></li>
+          <li class="nav-item nav-loadout"><a href="#expertise-section" class="nav-link"><span>LOADOUT</span></a></li>          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>STATS</span></a></li>
           <li class="nav-item"><a href="#projects-section" class="nav-link"><span>SHOWCASE</span></a></li>
         </ul></div>
       </div>

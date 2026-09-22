@@ -57,3 +57,10 @@
     white-space: nowrap;
   }
   
+/* Personal mode: hide Journey and Loadout entirely */
+body.personal-mode #resume-section,
+body.personal-mode #expertise-section,
+body.personal-mode .nav-journey,
+body.personal-mode .nav-loadout {
+  display: none !important;
+}
