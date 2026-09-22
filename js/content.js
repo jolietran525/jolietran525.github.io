@@ -1,7 +1,7 @@
 /* Edit the data objects below to add, remove, or reorder portfolio content. */
 
 var portfolioContent = {
-  hero: {
+  hello: {
     slides: [
       {
         greeting: "Hello!",
@@ -129,20 +129,22 @@ var portfolioContent = {
   },
 
   expertise: [
-    { icon: "flaticon-web-design", title: "Web Map Development" },
-    { icon: "flaticon-analysis", title: "Data Analytics" },
-    { icon: "flaticon-innovation", title: "Geospatial Data Analytics" }
+    { icon: "flaticon-web-design", title: "Web Map Development (HTML/Javascript)" },
+    { icon: "flaticon-web-design", title: "Tool Development (Python-based Executables)" },
+    { icon: "flaticon-web-design", title: "Dashboard Development (Python/R-based Servers: Streamlit & Shiny)" },
+    { icon: "flaticon-analysis", title: "[Spatial] Data Analysis (R/Python/SQL)" },
+    { icon: "flaticon-analysis", title: "Data Cleaning and Processing (R/Python/SQL)" }
   ],
 
   skills: [
-    { name: "PL/SQL", level: 95, color: 1 },
-    { name: "JavaScript", level: 85, color: 2 },
-    { name: "Python", level: 85, color: 3 },
-    { name: "R", level: 70, color: 4 },
-    { name: "MATLAB", level: 70, color: 5 },
-    { name: "GIS: QGIS, PostGIS", level: 95, color: 6 },
-    { name: "LeafletJS", level: 85, color: 6 },
-    { name: "MapboxGL", level: 75, color: 6 }
+    { name: "Python", level: 85 },
+    { name: "R", level: 85 },
+    { name: "PL/SQL", level: 85 },
+    { name: "MATLAB", level: 70 },
+    { name: "JavaScript", level: 70 },
+    { name: "GIS: QGIS, PostGIS", level: 95 },
+    { name: "LeafletJS", level: 85 },
+    { name: "MapboxGL", level: 75 }
   ],
 
   projects: [
@@ -198,9 +200,9 @@ function externalLink(href, content) {
   return href ? '<a href="' + href + '" target="_blank" rel="noopener">' + content + '</a>' : content;
 }
 
-function renderHero() {
-  document.querySelector('#home-section .home-slider').innerHTML = portfolioContent.hero.slides.map(function(slide) {
-    return '<div class="slider-item"><div class="overlay"></div><div class="container"><div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true"><div class="one-third js-fullheight order-md-last img" style="background-image:url(' + portfolioContent.hero.image + ')"><div class="overlay"></div></div><div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: \'70%\' }"><div class="text"><span class="subheading">' + slide.greeting + '</span><h1 class="mb-4 mt-3">' + slide.title + '</h1>' + (slide.subtitle ? '<h2 class="mb-4">' + slide.subtitle + '</h2>' : '') + '<p><a href="#about-section" class="btn btn-primary py-3 px-4">Contact me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p></div></div></div></div></div>';
+function renderHello() {
+  document.querySelector('#home-section .home-slider').innerHTML = portfolioContent.hello.slides.map(function(slide) {
+    return '<div class="slider-item"><div class="overlay"></div><div class="container"><div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true"><div class="one-third js-fullheight order-md-last img" style="background-image:url(' + portfolioContent.hello.image + ')"><div class="overlay"></div></div><div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: \'70%\' }"><div class="text"><span class="subheading">' + slide.greeting + '</span><h1 class="mb-4 mt-3">' + slide.title + '</h1>' + (slide.subtitle ? '<h2 class="mb-4">' + slide.subtitle + '</h2>' : '') + '<p><a href="#about-section" class="btn btn-primary py-3 px-4">Contact me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p></div></div></div></div></div>';
   }).join('');
 }
 
@@ -231,7 +233,7 @@ function renderExpertise() {
 
 function renderSkills() {
   document.querySelector('#skills-section .row:last-child').innerHTML = portfolioContent.skills.map(function(skill) {
-    return '<div class="col-md-6 animate-box"><div class="progress-wrap ftco-animate"><h3>' + skill.name + '</h3><div class="progress"><div class="progress-bar color-' + skill.color + '" role="progressbar" aria-valuenow="' + skill.level + '" aria-valuemin="0" aria-valuemax="100" style="width:' + skill.level + '%"><span>' + skill.level + '%</span></div></div></div></div>';
+    return '<div class="col-md-6 animate-box"><div class="progress-wrap ftco-animate"><h3>' + skill.name + '</h3><div class="progress"><div class="progress-bar role="progressbar" aria-valuenow="' + skill.level + '" aria-valuemin="0" aria-valuemax="100" style="width:' + skill.level + '%"><span>' + skill.level + '%</span></div></div></div></div>';
   }).join('');
 }
 
@@ -242,7 +244,7 @@ function renderProjects() {
 }
 
 function renderPortfolio() {
-  renderHero();
+  renderHello();
   renderAbout();
   renderResume();
   renderExpertise();
