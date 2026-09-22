@@ -133,22 +133,20 @@ var portfolioContent = {
   },
 
   expertise: [
-    { icon: "flaticon-web-design", title: "Web Map Development (HTML/Javascript)" },
+    { icon: "flaticon-web-design", title: "Web Map Development (HTML, Javascript)" },
     { icon: "flaticon-web-design", title: "Tool Development (Python-based Executables)" },
     { icon: "flaticon-web-design", title: "Dashboard Development (Python/R-based Servers: Streamlit & Shiny)" },
     { icon: "flaticon-analysis", title: "[Spatial] Data Analysis (R/Python/SQL)" },
-    { icon: "flaticon-analysis", title: "Data Cleaning and Processing (R/Python/SQL)" }
+    { icon: "flaticon-analysis", title: "Data Processing (R/Python/SQL)" }
   ],
 
   skills: [
-    { name: "Python", level: 85 },
-    { name: "R", level: 85 },
-    { name: "PL/SQL", level: 85 },
-    { name: "MATLAB", level: 70 },
-    { name: "JavaScript", level: 70 },
-    { name: "GIS: QGIS, PostGIS", level: 95 },
-    { name: "LeafletJS", level: 85 },
-    { name: "MapboxGL", level: 75 }
+    { name: "R", level: "Advanced", progress: 85 },
+    { name: "PL/SQL", level: "Proficient", progress: 70 },
+    { name: "Python", level: "Proficient", progress: 70 },
+    { name: "MATLAB", level: "Basic", progress: 50 },
+    { name: "JavaScript", level: "Basic", progress: 50 },
+    { name: "HTML/CSS", level: "Basic", progress: 50 }
   ],
 
   projects: [
@@ -255,7 +253,7 @@ function renderExpertise() {
 
 function renderSkills() {
   document.querySelector('#skills-section .row:last-child').innerHTML = portfolioContent.skills.map(function(skill) {
-    return '<div class="col-md-6 animate-box"><div class="progress-wrap ftco-animate"><h3>' + skill.name + '</h3><div class="progress"><div class="progress-bar role="progressbar" aria-valuenow="' + skill.level + '" aria-valuemin="0" aria-valuemax="100" style="width:' + skill.level + '%"><span>' + skill.level + '%</span></div></div></div></div>';
+    return '<div class="col-md-6 animate-box"><div class="progress-wrap ftco-animate"><h3>' + skill.name + '</h3><div class="progress"><div class="progress-bar" role="progressbar" aria-valuenow="' + skill.progress + '" aria-valuemin="0" aria-valuemax="100" style="width:' + skill.progress + '%"><span>' + skill.level + '</span></div></div></div></div>';
   }).join('');
 }
 

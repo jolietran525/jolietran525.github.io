@@ -50,4 +50,10 @@
     font-weight: 600;
     margin: 0;
   }
+
+  #skills-section .progress-bar span {
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+  }
   
