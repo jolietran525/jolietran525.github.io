@@ -39,4 +39,15 @@
   #about-section .about-info li span:first-child {
     width: auto;
   }
+
+  .resume-category-heading {
+    margin: 30px 0 15px;
+  }
+
+  .resume-category-heading h3 {
+    color: #ffbd39;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
   

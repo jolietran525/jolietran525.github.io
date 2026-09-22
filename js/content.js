@@ -41,6 +41,7 @@ var portfolioContent = {
   resume: {
     entries: [
       {
+        category: "education",
         date: "September 2026-June 2028",
         title: "M.S. in Human-Centered Design and Engineering (HCDE)",
         organization: "University of Washington",
@@ -49,6 +50,7 @@ var portfolioContent = {
         ]
       },
       {
+        category: "professional",
         date: "April 2024-September 2026",
         title: "Data Scientist",
         organization: "WSP USA Inc.",
@@ -67,6 +69,7 @@ var portfolioContent = {
         ]
       },
       {
+        category: "education",
         date: "September 2021-March 2024",
         title: "B.A. in Geography: Data Science",
         organization: "University of Washington",
@@ -77,6 +80,7 @@ var portfolioContent = {
         ]
       },
       {
+        category: "professional",
         date: "June 2023-January 2025",
         title: "Research Engineer",
         organization: "Washington State Transportation Center (TRAC)",
@@ -102,6 +106,7 @@ var portfolioContent = {
         ]
       },
       {
+        category: "volunteer",
         date: "June 2023-August 2023",
         title: "Social Media Research Intern",
         organization: "Humanities Data Science Summer Institute (HDSSI) @ University of Washington",
@@ -113,6 +118,7 @@ var portfolioContent = {
         ]
       },
       {
+        category: "volunteer",
         date: "April 2023-March 2024",
         title: "Undergraduate Research Assistant",
         organization: "Laboratory for Auditory Neuroscience and Development (LAND Lab)",
@@ -213,12 +219,31 @@ function renderAbout() {
 }
 
 function renderResume() {
-  document.querySelector('#resume-section #accordion').innerHTML = portfolioContent.resume.entries.map(function(entry, index) {
-    var body = entry.groups ? entry.groups.map(function(group) {
-      return '<section><span style="color:white; display:flex; justify-content:space-between;"><strong>' + group.title + '</strong>' + group.dates + '</span><ul>' + group.bullets.map(function(bullet) { return '<li>' + bullet + '</li>'; }).join('') + '</ul></section>';
-    }).join('') : '<ul>' + entry.bullets.map(function(bullet) { return '<li>' + bullet + '</li>'; }).join('') + '</ul>';
-    return '<div class="card resume-wrap ftco-animate"><div class="card-header" id="heading-' + index + '" data-toggle="collapse" data-target="#collapse-' + index + '" aria-expanded="true" aria-controls="collapse-' + index + '"><span class="date">' + entry.date + '</span><h3>' + entry.title + '</h3><span class="position">' + entry.organization + '</span></div><div id="collapse-' + index + '" class="card-body collapse" aria-labelledby="heading-' + index + '" data-parent="#accordion"><div class="mt-4">' + body + '</div></div></div>';
+  var categoryLabels = {
+    education: "Education",
+    professional: "Professional Experience",
+    volunteer: "Internship/Volunteer Experience"
+  };
+  var categoryOrder = ["professional", "education", "volunteer"];
+  var entryIndex = 0;
+  var resumeMarkup = categoryOrder.map(function(category) {
+    var entries = portfolioContent.resume.entries.filter(function(entry) {
+      return entry.category === category;
+    });
+    if (!entries.length) {
+      return '';
+    }
+    var heading = '<div class="resume-category-heading"><h3>' + categoryLabels[category] + '</h3></div>';
+    var cards = entries.map(function(entry) {
+      var index = entryIndex++;
+      var body = entry.groups ? entry.groups.map(function(group) {
+        return '<section><span style="color:white; display:flex; justify-content:space-between;"><strong>' + group.title + '</strong>' + group.dates + '</span><ul>' + group.bullets.map(function(bullet) { return '<li>' + bullet + '</li>'; }).join('') + '</ul></section>';
+      }).join('') : '<ul>' + entry.bullets.map(function(bullet) { return '<li>' + bullet + '</li>'; }).join('') + '</ul>';
+      return '<div class="card resume-wrap ftco-animate"><div class="card-header" id="heading-' + index + '" data-toggle="collapse" data-target="#collapse-' + index + '" aria-expanded="true" aria-controls="collapse-' + index + '"><span class="date">' + entry.date + '</span><h3>' + entry.title + '</h3><span class="position">' + entry.organization + '</span></div><div id="collapse-' + index + '" class="card-body collapse" aria-labelledby="heading-' + index + '" data-parent="#accordion"><div class="mt-4">' + body + '</div></div></div>';
+    }).join('');
+    return heading + cards;
   }).join('');
+  document.querySelector('#resume-section #accordion').innerHTML = resumeMarkup;
   document.querySelector('#resume-section .text-center p').innerHTML = '<a href="' + portfolioContent.resume.cv + '" target="_blank" class="btn btn-primary py-4 px-5">Download CV</a>';
 }
 
