@@ -262,8 +262,13 @@ var personalContent = {
       , photos: [
         { src: "images/photo_archive/h_photo_archive_1.png", caption: "Gas Work Park's Geese" },
         { src: "images/photo_archive/v_photo_archive_1.png", caption: "Free as a bird" },
-        { src: "images/photo_archive/h_photo_archive_2.png", caption: "Sakura-chan, can you stay a little longer?" }
-
+        { src: "images/photo_archive/h_photo_archive_2.png", caption: "Sakura-chan, can you stay a little longer?" },
+        { src: "images/photo_archive/v_photo_archive_2.png", caption: "Ben Thanh Market" },
+        { src: "images/photo_archive/v_photo_archive_3.png", caption: "Pike Place Market's sunset view" },
+        { src: "images/photo_archive/v_photo_archive_4.png", caption: "Humans on the WSF" },
+        { src: "images/photo_archive/v_photo_archive_5.png", caption: "Color pallete" },
+        { src: "images/photo_archive/v_photo_archive_6.png", caption: "Gems on the sky" },
+        { src: "images/photo_archive/v_photo_archive_7.png", caption: "An audio visual gallery, National Nordic Museum" },
       ] },
     { image: "images/image_2.jpg", title: "The Listening Room", role: "Music"
       , description: "Albums, artists, and small soundtrack moments that keep the week moving."
