@@ -22,4 +22,21 @@
   ::-webkit-scrollbar-thumb:active {
     background: #ffc107; 
   }
+
+  #about-section .heading-section p {
+    text-align: justify;
+  }
+
+  #about-section .about-info li {
+    justify-content: center;
+  }
+
+  #about-section .about-info li span {
+    width: auto;
+    margin: 0 5px;
+  }
+
+  #about-section .about-info li span:first-child {
+    width: auto;
+  }
   

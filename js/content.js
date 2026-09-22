@@ -18,7 +18,6 @@ var portfolioContent = {
   },
 
   about: {
-    image: "images/about.jpg",
     paragraphs: [
       "Jolie is currently a M.S. student in Human-Centered Design and Engineering (HCDE) at the University of \
       Washington, with an expected graduation date of 2028.",
@@ -33,7 +32,6 @@ var portfolioContent = {
       decisions and improves efficiency and accuracy in their work."
     ],
     details: [
-      { icon: "fa-solid fa-map-pin", text: "Seattle WA" },
       { icon: "fa-solid fa-inbox", text: "jolietran525@gmail.com", href: "mailto:jolietran525@gmail.com" },
       { icon: "fa-brands fa-linkedin-in", text: "Jolie's LinkedIn", href: "https://www.linkedin.com/in/jolietran525/" },
       { icon: "fa-brands fa-github", text: "Jolie's Github", href: "https://github.com/jolietran525" }
@@ -208,7 +206,6 @@ function renderHello() {
 
 function renderAbout() {
   var about = portfolioContent.about;
-  document.querySelector('#about-section .img-about .img').style.backgroundImage = 'url(' + about.image + ')';
   document.querySelector('#about-section .heading-section p').innerHTML = about.paragraphs.join('<br><br>');
   document.querySelector('#about-section .about-info').innerHTML = about.details.map(function(detail) {
     return '<li class="d-flex"><span><i class="' + detail.icon + '" style="font-size: 20px;"></i></span><span>' + externalLink(detail.href, detail.text) + '</span></li>';
