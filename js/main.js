@@ -275,3 +275,32 @@
 
 })(jQuery);
 
+function initScrollXP() {
+	var progress = document.querySelector('#xp-progress');
+	var xpValue = document.querySelector('#xp-value');
+	var levelValue = document.querySelector('#level-value');
+	var scrollPercent = document.querySelector('#scroll-percent');
+
+	if (!progress || !xpValue || !levelValue || !scrollPercent) {
+		return;
+	}
+
+	function updateXP() {
+		var scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+		var completion = scrollableHeight > 0 ? Math.min(window.scrollY / scrollableHeight, 1) : 0;
+		var xp = Math.round(completion * 10000);
+		var level = Math.min(Math.floor(completion * 9) + 1, 10);
+
+		progress.style.width = (completion * 100) + '%';
+		xpValue.textContent = String(xp).padStart(4, '0');
+		levelValue.textContent = 'LVL ' + String(level).padStart(2, '0');
+		scrollPercent.textContent = Math.round(completion * 100) + '%';
+	}
+
+	window.addEventListener('scroll', updateXP, { passive: true });
+	window.addEventListener('resize', updateXP);
+	updateXP();
+}
+
+initScrollXP();
+

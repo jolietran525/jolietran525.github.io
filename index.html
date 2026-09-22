@@ -19,21 +19,26 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/arcade.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="./images/user-astronaut-solid.svg" type="image/x-icon">
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="arcade-progress" aria-live="polite">
+      <div class="arcade-progress__label"><span>PLAYER 01</span><span id="level-value">LVL 01</span></div>
+      <div class="arcade-progress__track"><span id="xp-progress"></span></div>
+      <div class="arcade-progress__meta"><span>XP <strong id="xp-value">0000</strong> / 10000</span><span id="scroll-percent">0%</span></div>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">Jolie Tran</a>
-        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="oi oi-menu"></span> Menu</button>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="menu-arrow" aria-hidden="true"></span> Menu</button>
         <div class="collapse navbar-collapse" id="ftco-nav"><ul class="navbar-nav nav ml-auto">
-          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-          <li class="nav-item"><a href="#expertise-section" class="nav-link"><span>Expertise</span></a></li>
-          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+          <li class="nav-item"><a href="#about-section" class="nav-link"><span>ABOUT</span></a></li>
+          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>JOURNEY</span></a></li>
+          <li class="nav-item"><a href="#expertise-section" class="nav-link"><span>LOADOUT</span></a></li>
+          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>STATS</span></a></li>
+          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>SHOWCASE</span></a></li>
         </ul></div>
       </div>
     </nav>
@@ -44,14 +49,14 @@
     </div></div></section>
 
     <section class="ftco-section ftco-no-pb" id="resume-section"><div class="container">
-      <div class="row justify-content-center pb-5"><div class="col-md-10 heading-section text-center ftco-animate"><h2 class="mb-4">Resume</h2></div></div>
-      <div class="row d-flex"><div class="col-md-12" id="accordion"></div></div>
+      <div class="row justify-content-center pb-5"><div class="col-md-10 heading-section text-center ftco-animate"><h2 class="mb-4">JOURNEY</h2></div></div>
+      <div class="row d-flex"><div class="col-md-12 resume-map" id="accordion"></div></div>
       <div class="row justify-content-center mt-5"><div class="col-md-6 text-center ftco-animate"><p></p></div></div>
     </div></section>
 
-    <section class="ftco-section" id="expertise-section"><div class="container"><div class="row justify-content-center py-5 mt-5"><div class="col-md-12 heading-section text-center ftco-animate"><h2 class="mb-4">Expertise</h2></div></div><div class="row"></div></div></section>
-    <section class="ftco-section" id="skills-section"><div class="container"><div class="row justify-content-center pb-5"><div class="col-md-12 heading-section text-center ftco-animate"><h2 class="mb-4">My Skills</h2></div></div><div class="row"></div></div></section>
-    <section class="ftco-section ftco-project" id="projects-section"><div class="container"><div class="row justify-content-center pb-5"><div class="col-md-12 heading-section text-center ftco-animate"><h2 class="mb-4">My Projects</h2></div></div><div class="row"></div></div></section>
+    <section class="ftco-section" id="expertise-section"><div class="container"><div class="row justify-content-center py-5 mt-5"><div class="col-md-12 heading-section text-center ftco-animate"><h2 class="mb-4">LOADOUT</h2></div></div><div class="row"></div></div></section>
+    <section class="ftco-section" id="skills-section"><div class="container"><div class="row justify-content-center pb-5"><div class="col-md-12 heading-section text-center ftco-animate"><h2 class="mb-4">STATS</h2></div></div><div class="row"></div></div></section>
+    <section class="ftco-section ftco-project" id="projects-section"><div class="container"><div class="row justify-content-center pb-5"><div class="col-md-12 heading-section text-center ftco-animate"><h2 class="mb-4">SHOWCASE</h2></div></div><div class="row"></div></div></section>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>

@@ -6,12 +6,17 @@ var portfolioContent = {
       {
         greeting: "Hello!",
         title: "I'm <span>Jolie Tran</span>",
-        subtitle: "A data scientist who turns messy transportation and spatial data into tools people can use."
+        subtitle: "A data scientist who turns messy data into tools people can use."
       },
       {
         greeting: "Hello!",
-        title: "I focus on <span>safety</span>, <span>accessibility</span>, and <span>equity</span>",
-        subtitle: "I work at the intersection of geospatial analysis, data engineering, and human-centered design."
+        title: "I'm <span>Jolie Tran</span>",
+        subtitle: "I work at the intersection of data engineering and human-centered design."
+      },
+      {
+        greeting: "Hello!",
+        title: "I'm <span>Jolie Tran</span>",
+        subtitle: "I focus on efficiency, accuracy, and usability."
       }
     ],
     image: "images/bg_2.png"
@@ -19,15 +24,15 @@ var portfolioContent = {
 
   about: {
     paragraphs: [
-      "Jolie is currently a M.S. student in Human-Centered Design and Engineering (HCDE) at the University of \
+      "I am currently a M.S. student in Human-Centered Design and Engineering (HCDE) at the University of \
       Washington, with an expected graduation date of 2028.",
-      "Jolie has been a Transportation Data Scientist at WSP USA Inc. for 2+ years of experience. She specializes \
-      in data processing, data visualization, and data tools development. She works with MPOs, DOTs, and transit \
-      agencies to provide data-driven insights for transportation planning and operations.",
-      "Previously, Jolie got her B.A. in Geography: Data Science at the University of Washington (2024). Upon \
-      graduation, she had at least 1 year of experience with data analytics and web development at the Washington \
+      "I have been a Transportation Data Scientist at WSP USA Inc. for 2+ years of experience. I specialize \
+      in data processing, data visualization, and data tools development. I work with MPOs, DOTs, and transit \
+      agencies to provide data-driven insights for safety, transit planning and traffic operations.",
+      "Previously, I got my B.A. in Geography: Data Science at the University of Washington (2024). Upon \
+      graduation, I had at least 1 year of experience with data analytics and web development at the Washington \
       State Transportation Center (TRAC UW) and a summer internship at UW's Humanities Data Science Summer Institute 2023.",
-      "Jolie has a passion in \"cooking up\" the data to create insightful visualizations and building data tools \
+      "I have a passion in \"cooking up\" the data to create insightful visualizations and building data tools \
       (either for the purpose of visualization or analysis or extraction) that can help people make better \
       decisions and improves efficiency and accuracy in their work."
     ],
@@ -231,13 +236,13 @@ function renderResume() {
     if (!entries.length) {
       return '';
     }
-    var heading = '<div class="resume-category-heading"><h3>' + categoryLabels[category] + '</h3></div>';
+    var heading = '<div class="resume-category-heading"><span class="zone-label">ZONE ' + String(categoryOrder.indexOf(category) + 1).padStart(2, '0') + '</span><h3>' + categoryLabels[category] + '</h3></div>';
     var cards = entries.map(function(entry) {
       var index = entryIndex++;
       var body = entry.groups ? entry.groups.map(function(group) {
-        return '<section><span style="color:white; display:flex; justify-content:space-between;"><strong>' + group.title + '</strong>' + group.dates + '</span><ul>' + group.bullets.map(function(bullet) { return '<li>' + bullet + '</li>'; }).join('') + '</ul></section>';
+        return '<section><span class="resume-group-heading"><strong>' + group.title + '</strong><span>' + group.dates + '</span></span><ul>' + group.bullets.map(function(bullet) { return '<li>' + bullet + '</li>'; }).join('') + '</ul></section>';
       }).join('') : '<ul>' + entry.bullets.map(function(bullet) { return '<li>' + bullet + '</li>'; }).join('') + '</ul>';
-      return '<div class="card resume-wrap ftco-animate"><div class="card-header" id="heading-' + index + '" data-toggle="collapse" data-target="#collapse-' + index + '" aria-expanded="true" aria-controls="collapse-' + index + '"><span class="date">' + entry.date + '</span><h3>' + entry.title + '</h3><span class="position">' + entry.organization + '</span></div><div id="collapse-' + index + '" class="card-body collapse" aria-labelledby="heading-' + index + '" data-parent="#accordion"><div class="mt-4">' + body + '</div></div></div>';
+      return '<div class="card resume-wrap ftco-animate"><div class="resume-node" aria-hidden="true">' + String(index + 1).padStart(2, '0') + '</div><div class="card-header" id="heading-' + index + '" data-toggle="collapse" data-target="#collapse-' + index + '" aria-expanded="true" aria-controls="collapse-' + index + '"><span class="achievement-label">ACHIEVEMENT UNLOCKED</span><span class="date">' + entry.date + '</span><h3>' + entry.title + '</h3><span class="position">' + entry.organization + '</span></div><div id="collapse-' + index + '" class="card-body collapse" aria-labelledby="heading-' + index + '" data-parent="#accordion"><div class="mt-4">' + body + '</div></div></div>';
     }).join('');
     return heading + cards;
   }).join('');
