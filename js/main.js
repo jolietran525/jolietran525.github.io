@@ -7,14 +7,23 @@
 
 	"use strict";
 
-	$(window).stellar({
-    responsive: true,
-    parallaxBackgrounds: true,
-    parallaxElements: true,
-    horizontalScrolling: false,
-    hideDistantElements: false,
-    scrollProperty: 'scroll'
-  });
+	// Parallax libraries can fight the browser's native touch scrolling on
+	// mobile Safari/Chrome. Keep them enabled on desktop, but let mobile use
+	// native document scrolling.
+	var isMobileViewport = function() {
+		return window.matchMedia('(max-width: 767.98px), (pointer: coarse)').matches;
+	};
+
+	if (!isMobileViewport()) {
+		$(window).stellar({
+			responsive: true,
+			parallaxBackgrounds: true,
+			parallaxElements: true,
+			horizontalScrolling: false,
+			hideDistantElements: false,
+			scrollProperty: 'scroll'
+		});
+	}
 
 
 	var fullHeight = function() {
@@ -37,8 +46,11 @@
 	};
 	loader();
 
-	// Scrollax
-   $.Scrollax();
+	// Scrollax is disabled on touch/mobile viewports because its scroll
+	// calculations can reset the document position during a native swipe.
+	if (!isMobileViewport()) {
+		$.Scrollax();
+	}
 
 
 

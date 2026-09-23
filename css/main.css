@@ -64,3 +64,18 @@ body.personal-mode .nav-journey,
 body.personal-mode .nav-loadout {
   display: none !important;
 }
+
+/* Mobile: preserve native vertical touch scrolling. Parallax/scroll plugins
+   are disabled in main.js at this breakpoint, so don't constrain the page
+   with a fixed-height or hidden vertical overflow. */
+@media (max-width: 767.98px), (pointer: coarse) {
+  html,
+  body {
+    height: auto;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: auto;
+  }
+}
