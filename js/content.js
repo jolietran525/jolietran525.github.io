@@ -38,8 +38,8 @@ var portfolioContent = {
     ],
     details: [
       { icon: "fa-solid fa-inbox", text: "jolietran525@gmail.com", href: "mailto:jolietran525@gmail.com" },
-      { icon: "fa-brands fa-linkedin-in", text: "Jolie's LinkedIn", href: "https://www.linkedin.com/in/jolietran525/" },
-      { icon: "fa-brands fa-github", text: "Jolie's Github", href: "https://github.com/jolietran525" }
+      { icon: "fa-brands fa-linkedin-in", text: "My LinkedIn", href: "https://www.linkedin.com/in/jolietran525/" },
+      { icon: "fa-brands fa-github", text: "My Github", href: "https://github.com/jolietran525" }
     ]
   },
 
@@ -207,7 +207,7 @@ var portfolioContent = {
 var personalContent = {
   hello: {
     slides: [
-      { greeting: "PLAYER PROFILE: PERSONAL", title: "I'm <span>Jolie Tran</span>", subtitle: "Photographer, playlist curator, cinema appreciator, and enthusiastic home cook." },
+      { greeting: "PLAYER PROFILE: PERSONAL", title: "I'm <span>Jolie Tran</span>", subtitle: "Photography hobbyist, playlist curator, cinema appreciator, and coffee/matcha lover." },
       { greeting: "PLAYER PROFILE: PERSONAL", title: "Collecting <span>small moments</span>", subtitle: "A playful archive of images, sounds, films, and hobbies in progress." }
     ],
     image: "images/photo_archive/v_photo_archive_1.png"
@@ -221,7 +221,7 @@ var personalContent = {
       "I am a caffeine enthusiast. I enjoy exploring new coffee and matcha shops around town. I also make my own drinks at home, experiencing the process of brewing and tasting different beans and powder/leaves.",
     ],
     details: [
-      { icon: "fa-solid fa-camera", text: "Photography archive (coming soon)", href: "#projects-section" },
+      { icon: "fa-solid fa-camera", text: "Photography archive", href: "#projects-section" },
       { icon: "fa-solid fa-music", text: "Current listening rotation", href: "#projects-section" },
       { icon: "fa-solid fa-film", text: "Films on my watchlist", href: "#projects-section" }
     ]
@@ -274,7 +274,8 @@ var personalContent = {
       , description: "Albums, artists, and small soundtrack moments that keep the week moving."
       , links: [], href: "#"
       , playlists: [
-        { title: "Daily mix", src: "https://open.spotify.com/embed/playlist/37i9dQZF1E4m9ZnqmwaAtb?utm_source=generator&si=1babf6c9d13b4a3a" }
+        { title: "Daily mix", src: "https://open.spotify.com/embed/playlist/37i9dQZF1E4m9ZnqmwaAtb?utm_source=generator&si=1babf6c9d13b4a3a" },
+        { title: "Favorite artist", src: "https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO2MKBFK?utm_source=generator&si=559dfcbbd0b742fc"}
       ] },
     { image: "images/image_2.jpg", title: "The Taste", role: "Coffee and Tea"
       , description: "Exploring the world of coffee and tea, from bean to cup."
@@ -303,12 +304,21 @@ var personalContent = {
             , imdb: "https://www.imdb.com/title/tt11280740/" },
           { title: "Slow Horses (2022)"
             , poster: "https://m.media-amazon.com/images/M/MV5BY2NkNTBiYWUtMGFiZS00MGI4LWE3YjMtZTU3NzhhZmEyYzlkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
-            , imdb: "https://www.imdb.com/title/tt5875444/" }
+            , imdb: "https://www.imdb.com/title/tt5875444/" },
+          { title: "With You (2016)"
+            , poster: "https://m.media-amazon.com/images/M/MV5BYjA4Y2M1ZjktM2FhYS00YTY5LWI3ODktMDlhODJlZjhjMTlhXkEyXkFqcGc@._V1_.jpg"
+            , imdb: "https://www.imdb.com/title/tt7049444/" },
+          { title: "Your Name Engraved Herein (2020)"
+            , poster: "https://m.media-amazon.com/images/M/MV5BODcwZDY4N2QtYzkwNy00NzNjLWIwODAtM2Y5MGU0YzM1MzQyXkEyXkFqcGc@._V1_.jpg"
+            , imdb: "https://www.imdb.com/title/tt10329134/" }
         ] }
   ]
 };
 
-var activePortfolio = window.sessionStorage && window.sessionStorage.getItem('portfolioMode') === 'personal' ? personalContent : portfolioContent;
+function getSavedMode() {
+  try { return window.sessionStorage.getItem('portfolioMode'); } catch (e) { return null; }
+}
+var activePortfolio = getSavedMode() === 'personal' ? personalContent : portfolioContent;
 
 function externalLink(href, content) {
   if (!href) {
@@ -321,8 +331,10 @@ function externalLink(href, content) {
 }
 
 function renderHello() {
+  // The hero image is static (outside the carousel) so only the text changes between slides.
+  document.querySelector('#home-section .hero-image__pic').style.backgroundImage = 'url("' + activePortfolio.hello.image + '")';
   document.querySelector('#home-section .home-slider').innerHTML = activePortfolio.hello.slides.map(function(slide) {
-    return '<div class="slider-item"><div class="overlay"></div><div class="container"><div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true"><div class="one-third js-fullheight order-md-last img" style="background-image:url(' + activePortfolio.hello.image + ')"><div class="overlay"></div></div><div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: \'70%\' }"><div class="text"><span class="subheading">' + slide.greeting + '</span><h1 class="mb-4 mt-3">' + slide.title + '</h1>' + (slide.subtitle ? '<h2 class="mb-4">' + slide.subtitle + '</h2>' : '') + '<p><a href="#about-section" class="btn btn-primary py-3 px-4">About me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">Showcase</a></p></div></div></div></div></div>';
+    return '<div class="slider-item"><div class="container"><div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true"><div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: \'70%\' }"><div class="text"><span class="subheading">' + slide.greeting + '</span><h1 class="mb-4 mt-3">' + slide.title + '</h1>' + (slide.subtitle ? '<h2 class="mb-4">' + slide.subtitle + '</h2>' : '') + '<p><a href="#about-section" class="btn btn-primary py-3 px-4">About me</a> <a href="#projects-section" class="btn btn-white btn-outline-white py-3 px-4">Showcase</a></p></div></div></div></div></div>';
   }).join('');
 }
 
@@ -381,26 +393,26 @@ function renderSkills() {
 function renderProjects() {
   document.querySelector('#projects-section .row:last-child').innerHTML = activePortfolio.projects.map(function(project) {
     if (project.playlists) {
-      return '<div class="col-md-6"><div class="playlist-room room-card ftco-animate"><div class="playlist-room__header"><span class="playlist-room__eyebrow">' + project.role + '</span><h3>' + project.title + '</h3><p>' + project.description + '</p></div><div class="playlist-room__scroll">' + project.playlists.map(function(playlist) {
+      return '<div class="col-md-6 room-container"><div class="playlist-room room-card ftco-animate"><div class="playlist-room__header"><span class="playlist-room__eyebrow">' + project.role + '</span><h3>' + project.title + '</h3><p>' + project.description + '</p></div><div class="playlist-room__scroll">' + project.playlists.map(function(playlist) {
         return '<div class="playlist-room__item"><h4>' + playlist.title + '</h4><iframe title="' + playlist.title + ' Spotify playlist" style="border-radius:12px" src="' + playlist.src + '" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>';
       }).join('') + '</div><button class="room-card__toggle" type="button">VIEW MORE</button></div></div>';
     }
     if (project.locations) {
-      return '<div class="col-md-6"><div class="location-room room-card ftco-animate"><div class="location-room__header"><span class="location-room__eyebrow">' + project.role + '</span><h3>' + project.title + '</h3><p>' + project.description + '</p></div><div class="location-room__scroll">' + project.locations.map(function(location) {
+      return '<div class="col-md-6 room-container"><div class="location-room room-card ftco-animate"><div class="location-room__header"><span class="location-room__eyebrow">' + project.role + '</span><h3>' + project.title + '</h3><p>' + project.description + '</p></div><div class="location-room__scroll">' + project.locations.map(function(location) {
         return '<a class="location-room__item" href="' + location.href + '" target="_blank" rel="noopener"><span class="location-room__icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span><span><strong>' + location.title + '</strong><small>OPEN MAP SEARCH</small></span><span class="location-room__arrow" aria-hidden="true">&gt;</span></a>';
       }).join('') + '</div><button class="room-card__toggle" type="button">VIEW MORE</button></div></div>';
     }
     if (project.watchlist) {
-      return '<div class="col-md-6"><div class="watchlist-room room-card ftco-animate"><div class="watchlist-room__header"><span class="watchlist-room__eyebrow">' + project.role + '</span><h3>' + project.title + '</h3><p>' + project.description + '</p></div><div class="watchlist-room__scroll">' + (project.watchlist.length ? project.watchlist.map(function(item) {
+      return '<div class="col-md-6 room-container"><div class="watchlist-room room-card ftco-animate"><div class="watchlist-room__header"><span class="watchlist-room__eyebrow">' + project.role + '</span><h3>' + project.title + '</h3><p>' + project.description + '</p></div><div class="watchlist-room__scroll">' + (project.watchlist.length ? project.watchlist.map(function(item) {
         return '<a class="watchlist-room__poster" href="' + item.imdb + '" target="_blank" rel="noopener"><img src="' + item.poster + '" alt="' + item.title + ' poster" loading="lazy"><span>' + item.title + '</span></a>';
       }).join('') : '<p class="watchlist-room__empty">Add a poster URL and IMDb page to the watchlist data to start building this collection.</p>') + '</div><button class="room-card__toggle" type="button">VIEW MORE</button></div></div>';
     }
     if (project.photos) {
-      return '<div class="col-md-6"><div class="photo-room room-card ftco-animate"><div class="photo-room__header"><span class="photo-room__eyebrow">' + project.role + '</span><h3>' + project.title + '</h3><p>' + project.description + '</p></div><div class="photo-room__scroll">' + (project.photos.length ? project.photos.map(function(photo) {
+      return '<div class="col-md-6 room-container"><div class="photo-room room-card ftco-animate"><div class="photo-room__header"><span class="photo-room__eyebrow">' + project.role + '</span><h3>' + project.title + '</h3><p>' + project.description + '</p></div><div class="photo-room__scroll">' + (project.photos.length ? project.photos.map(function(photo) {
         return '<div class="photo-room__item"><img src="' + photo.src + '" alt="' + (photo.caption || project.title) + '" loading="lazy">' + (photo.caption ? '<span>' + photo.caption + '</span>' : '') + '</div>';
       }).join('') : '<p class="photo-room__empty">Add photo URLs to start building this archive.</p>') + '</div><button class="room-card__toggle" type="button">VIEW MORE</button></div></div>';
     }
-    return '<div class="col-md-6"><div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image:url(' + project.image + ')"><div class="overlay"></div><div class="text text-center p-4"><h3>' + externalLink(project.href, '<strong>' + project.title + '</strong>') + '</h3><span>' + project.role + '</span><p>' + project.description + '</p><div class="icon">' + project.links.map(function(link) { return externalLink(link.href, '<i class="' + link.icon + '"></i>'); }).join(' ') + '</div></div></div></div>';
+    return '<div class="col-md-6 room-container"><div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image:url(' + project.image + ')"><div class="overlay"></div><div class="text text-center p-4"><h3>' + externalLink(project.href, '<strong>' + project.title + '</strong>') + '</h3><span>' + project.role + '</span><p>' + project.description + '</p><div class="icon">' + project.links.map(function(link) { return externalLink(link.href, '<i class="' + link.icon + '"></i>'); }).join(' ') + '</div></div></div></div>';
   }).join('');
 }
 
@@ -427,16 +439,23 @@ document.querySelector('#projects-section .row:last-child').addEventListener('cl
 
 function updateModeControl(personalMode) {
   document.body.classList.toggle('personal-mode', personalMode);
-  document.querySelector('#mode-toggle').setAttribute('aria-pressed', String(personalMode));
-  document.querySelector('#mode-toggle-check').textContent = personalMode ? '[ ]' : '[x]';
-  document.querySelector('#mode-toggle-label').textContent = 'PRO MODE';
+  document.querySelector('#mode-toggle').setAttribute('aria-checked', String(personalMode));
 }
 
 updateModeControl(activePortfolio === personalContent);
 
 document.querySelector('#mode-toggle').addEventListener('click', function() {
+  var modeToggle = this;
+  if (modeToggle.disabled) {
+    return;
+  }
   var personalMode = activePortfolio !== personalContent;
-  window.sessionStorage.setItem('portfolioMode', personalMode ? 'personal' : 'professional');
-  window.location.reload();
+  modeToggle.disabled = true;
+  try { window.sessionStorage.setItem('portfolioMode', personalMode ? 'personal' : 'professional'); } catch (e) {}
+  // Flip the switch first so the slide animation is visible, then reload with the new content.
+  modeToggle.setAttribute('aria-checked', String(personalMode));
+  window.setTimeout(function() {
+    window.location.reload();
+  }, 260);
 });
 

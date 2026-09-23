@@ -66,16 +66,16 @@
 	var onePageClick = function() {
 
 
-		$(document).on('click', '#ftco-nav a[href^="#"], #about-section .about-info a[href^="#"]', function (event) {
-	    event.preventDefault();
+		$(document).on('click', '#ftco-nav a[href^="#"], #about-section .about-info a[href^="#"], #home-section a.btn[href^="#"]', function (event) {
+			event.preventDefault();
 
-	    var href = $.attr(this, 'href');
+			var href = $.attr(this, 'href');
 
-	    $('html, body').animate({
-	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 500, function() {
-	    	// window.location.hash = href;
-	    });
+			$('html, body').animate({
+				scrollTop: $(href).offset().top - 70
+			}, 500, function() {
+				history.replaceState(null, '', href);
+			});
 		});
 
 	};
@@ -87,6 +87,11 @@
 		$('.home-slider').owlCarousel({
 	    loop:true,
 	    autoplay: true,
+	    // Owl 2.3.0 sets `touch-action: none` on .owl-drag slides, which blocks vertical page scrolling on
+	    // touch devices. The hero text rotates on its own, so drag/swipe is switched off entirely.
+	    touchDrag: false,
+	    mouseDrag: false,
+	    pullDrag: false,
 	    margin:0,
 	    animateOut: 'fadeOut',
 	    animateIn: 'fadeIn',
