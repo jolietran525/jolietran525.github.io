@@ -152,41 +152,62 @@
 
 	// scroll
 	var scrollWindow = function() {
-		$(window).scroll(function(){
-			var $w = $(this),
+		var updateNavbar = function() {
+			var $w = $(window),
 					st = $w.scrollTop(),
 					navbar = $('.ftco_navbar'),
-					sd = $('.js-scroll-wrap');
+					sd = $('.js-scroll-wrap'),
+					isMobile = window.matchMedia('(max-width: 991px)').matches;
 
+			/*
+			 * Mobile: keep the navbar fixed directly at the top once the
+			 * user scrolls. Do not use the template's awake/sleep animation
+			 * because its negative margin can create a gap on real devices.
+			 */
+			if (isMobile) {
+				if (st > 80) {
+					navbar.addClass('scrolled');
+				} else {
+					navbar.removeClass('scrolled awake sleep');
+				}
+
+				return;
+			}
+
+			/* Desktop: preserve the original template behavior. */
 			if (st > 150) {
-				if ( !navbar.hasClass('scrolled') ) {
+				if (!navbar.hasClass('scrolled')) {
 					navbar.addClass('scrolled');	
 				}
-			} 
+			}
 			if (st < 150) {
-				if ( navbar.hasClass('scrolled') ) {
+				if (navbar.hasClass('scrolled')) {
 					navbar.removeClass('scrolled sleep');
 				}
-			} 
-			if ( st > 350 ) {
-				if ( !navbar.hasClass('awake') ) {
+			}
+			if (st > 350) {
+				if (!navbar.hasClass('awake')) {
 					navbar.addClass('awake');	
 				}
-				
-				if(sd.length > 0) {
+
+				if (sd.length > 0) {
 					sd.addClass('sleep');
 				}
 			}
-			if ( st < 350 ) {
-				if ( navbar.hasClass('awake') ) {
+			if (st < 350) {
+				if (navbar.hasClass('awake')) {
 					navbar.removeClass('awake');
 					navbar.addClass('sleep');
 				}
-				if(sd.length > 0) {
+				if (sd.length > 0) {
 					sd.removeClass('sleep');
 				}
 			}
-		});
+		};
+
+		$(window).on('scroll', updateNavbar);
+		$(window).on('resize', updateNavbar);
+		updateNavbar();
 	};
 	scrollWindow();
 

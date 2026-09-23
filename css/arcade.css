@@ -232,7 +232,21 @@ a:hover { color: var(--arcade-black); text-decoration: none; }
   .ftco-navbar-light.scrolled .nav-item > .nav-link { color: var(--arcade-black) !important; }
   .arcade-progress { bottom: 12px; }
   .navbar { padding-left: 15px; padding-right: 15px; }
-  .navbar.ftco-navbar-light.scrolled { margin-top: 0 !important; padding: 20px 15px !important; }
+  /* Mobile navbar: fixed directly to the viewport top.
+     Do not use the template's -130px margin animation. */
+  .ftco-navbar-light.scrolled {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin-top: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 15px !important;
+    transform: none !important;
+    transition: none !important;
+    z-index: 1030;
+  }
   .navbar.ftco-navbar-light.scrolled .navbar-toggler { border-color: var(--arcade-blue) !important; color: var(--arcade-black) !important; font-size: 8px !important; }
   .navbar.ftco-navbar-light.scrolled .navbar-toggler:hover, .navbar.ftco-navbar-light.scrolled .navbar-toggler:focus { background: var(--arcade-black) !important; border-color: var(--arcade-black) !important; color: var(--arcade-blue) !important; }
 }
@@ -240,9 +254,9 @@ a:hover { color: var(--arcade-black); text-decoration: none; }
 @media (max-width: 575px) {
   html, body { max-width: 100%; overflow-x: hidden; }
   .ftco-navbar-light .container { max-width: 100%; width: 100%; }
-  .navbar { min-height: 0; position: relative; }
+  .navbar { min-height: 0; }
   .navbar .container { max-width: 100% !important; width: 100% !important; }
-  .navbar.ftco-navbar-light.scrolled { min-height: 0; }
+  .ftco-navbar-light.scrolled { min-height: 0; }
   .navbar-profile { gap: 10px; }
   .mode-switch { --switch-w: 66px; --switch-h: 32px; }
   .navbar .navbar-toggler { flex: 0 0 auto; margin-left: 10px; }
