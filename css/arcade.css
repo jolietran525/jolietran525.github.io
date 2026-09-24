@@ -282,7 +282,7 @@ a:hover { color: var(--arcade-black); text-decoration: none; }
   .navbar .navbar-toggler { margin-left: 6px; padding-left: 8px !important; padding-right: 8px !important; }
 }
 
-.room-card { max-height: 460px; overflow: hidden; padding-bottom: 64px; position: relative; transition: max-height .4s ease; }
+.room-card { max-height: 460px; overflow: hidden; padding-bottom: 100px; position: relative; transition: max-height .4s ease; }
 .room-card.is-expanded { max-height: 3000px; }
 .room-card:not(.is-expanded)::after { background: linear-gradient(to bottom, rgba(0,0,0,0), var(--arcade-black)); bottom: 64px; content: ""; height: 60px; left: 0; pointer-events: none; position: absolute; right: 0; }
 .room-card__toggle { background: var(--arcade-black); border: 1px dashed var(--arcade-gray); bottom: 24px; color: var(--arcade-blue); cursor: pointer; font-family: var(--arcade-pixel); font-size: 8px; left: 24px; letter-spacing: 1px; padding: 10px; position: absolute; right: 24px; text-align: center; text-transform: uppercase; }

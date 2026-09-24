@@ -317,13 +317,24 @@ var personalContent = {
         { src: "images/photo_archive/v_photo_archive_5.png", caption: "Color pallete" },
         { src: "images/photo_archive/v_photo_archive_6.png", caption: "Gems on the sky" },
         { src: "images/photo_archive/v_photo_archive_7.png", caption: "An audio visual gallery, National Nordic Museum" },
+        { src: "images/photo_archive/v_photo_archive_8.png", caption: "Geometry of stairs and street lights" },
+        { src: "images/photo_archive/v_photo_archive_9.png", caption: "Fly me away from the moon" },
+        { src: "images/photo_archive/v_photo_archive_10.png", caption: "Sunset at the Cascades" },
+        { src: "images/photo_archive/v_photo_archive_11.png", caption: "520" },
+        { src: "images/photo_archive/v_photo_archive_12.png", caption: "Flow" },
+        { src: "images/photo_archive/v_photo_archive_13.png", caption: "Dreamscapes" },
+        { src: "images/photo_archive/v_photo_archive_14.png", caption: "Downtown's skyscraper" },
+        { src: "images/photo_archive/v_photo_archive_15.png", caption: "In their own world" },
+        { src: "images/photo_archive/v_photo_archive_16.png", caption: "Fall is here!" },
       ] },
     { image: "images/image_2.jpg", title: "The Listening Room", role: "Music"
       , description: "Albums, artists, and small soundtrack moments that keep the week moving."
       , links: [], href: "#"
       , playlists: [
         { title: "Daily mix", src: "https://open.spotify.com/embed/playlist/37i9dQZF1E4m9ZnqmwaAtb?utm_source=generator&si=1babf6c9d13b4a3a" },
-        { title: "Favorite artist", src: "https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO2MKBFK?utm_source=generator&si=559dfcbbd0b742fc"}
+        { title: "Favorite artist", src: "https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO2MKBFK?utm_source=generator&si=559dfcbbd0b742fc"},
+        { title: "Summer playlist", src: "https://open.spotify.com/embed/album/5HQrHtpGthJMePFhXT3jKS?utm_source=generator&si=81840323f4874089"},
+        { title: "Fall playlist", src: "https://open.spotify.com/embed/album/6kZ42qRrzov54LcAk4onW9?utm_source=generator&si=6ba260dedc724141"}
       ] },
     { image: "images/image_2.jpg", title: "The Taste", role: "Coffee and Tea"
       , description: "Exploring the world of coffee and tea, from bean to cup."
