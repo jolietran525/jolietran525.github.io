@@ -532,7 +532,7 @@
 /* ACTIVE SECTION */
 
 .project-toc__link.active {
-  color: var(--arcade-white);
+  color: var(--arcade-white) !important;
 
   background: rgba(46, 190, 239, 0.12);
 
