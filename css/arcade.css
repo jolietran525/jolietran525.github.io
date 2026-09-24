@@ -32,6 +32,7 @@ body::before { background: repeating-linear-gradient(0deg, rgba(46, 190, 239, .0
 .navbar .container { align-items: center; display: flex; flex-wrap: wrap; }
 .ftco-navbar-light, .ftco-navbar-light.scrolled { background: var(--arcade-white) !important; }
 .navbar-brand { color: var(--arcade-black) !important; font-family: var(--arcade-pixel); font-size: 13px; margin-left: 0; text-transform: uppercase; }
+
 .ftco-navbar-light .navbar-brand, .ftco-navbar-light.scrolled .navbar-brand { color: var(--arcade-black) !important; }
 .navbar-brand::before { color: var(--arcade-blue); content: '> '; }
 .navbar-nav .nav-link { color: var(--arcade-gray) !important; font-family: var(--arcade-pixel); font-size: 8px; padding: 12px 10px !important; }
@@ -142,6 +143,7 @@ a:hover { color: var(--arcade-black); text-decoration: none; }
 .project:hover .text h3, .project:hover .text h3 a, .project:hover .text h3 strong, .project:hover .text span, .project:hover .text p { color: var(--arcade-black) !important; }
 .project span, .project p { font-size: 13px; line-height: 1.7; }
 .project .icon a, .project .text .icon a i { color: var(--arcade-blue) !important; font-size: 20px; margin: 0 8px; }
+.project { background-size: contain !important;  background-position: center center; background-repeat: no-repeat; background-color: white; }
 
 .room-container { padding: 20px 20px; }
 .playlist-room { background: var(--arcade-black); border: 2px solid var(--arcade-gray); color: var(--arcade-white); min-height: 340px; padding: 24px; }

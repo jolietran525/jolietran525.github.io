@@ -157,6 +157,54 @@ var portfolioContent = {
 
   projects: [
     {
+      image: "https://mms.businesswire.com/media/20191119005371/en/757516/5/Synchro_11_Logo-01.jpg",
+      title: "Synchro Processor",
+      role: "Data Scientist @ WSP",
+      description: "An live server dashboard tool that streamlined and automated WSDOT toll disposition report workflow.",
+      links: [],
+      href: "./project.html?name=synchro-processor"
+    },
+    {
+      image: "https://www.helixtraffic.com/wp-content/uploads/2026/03/Idax.Helix-Full-Color.png",
+      title: "IDAX Processor",
+      role: "Data Scientist @ WSP",
+      description: "An automation tool (.exe application) that reads and combines IDAX traffic counts data from multiple files/intersections (.xlsx) and compiles them into a structured Excel workbook",
+      links: [],
+      href: "./project.html?name=idax-processor"
+    },
+    {
+      image: "https://cdn-wsprod.azureedge.net/public/cwp/assets/images/logo_header_wsdot_goodtogo.png",
+      title: "WSDOT Toll Reporting Dashboard",
+      role: "Data Scientist @ WSP",
+      description: "A password-protected Streamlit dashboard that automated a recurring toll reporting workflow, replacing a manual query-to-Excel process with an interactive reporting application.",
+      links: [],
+      href: "./project.html?name=wsdot-toll-reporting-dashboard"
+    },
+    {
+      image: "https://cdn-wsprod.azureedge.net/public/cwp/assets/images/logo_header_wsdot_goodtogo.png",
+      title: "WSDOT Toll Data Request Form",
+      role: "Data Scientist @ WSP",
+      description: "A password-protected Streamlit request-management application that transformed an email- and spreadsheet-based client request process into a centralized workflow for submitting, tracking, commenting on, and completing data requests.",
+      links: [],
+      href: "./project.html?name=wsdot-toll-request-form"
+    },
+    {
+      image: "https://targetzero.com/wp-content/uploads/2024/09/safe-system-approach-1030x1030.png",
+      title: "WSDOT Crash Analysis Pipeline",
+      role: "Data Scientist @ WSP",
+      description: "A reusable R `targets` pipeline that standardizes crash-data ETL, analysis, visualization, and reporting across transportation safety projects and study areas within Washington State.",
+      links: [],
+      href: "./project.html?name=wsdot-crash-analysis"
+    },
+    {
+      image: "https://mtc.ca.gov/themes/custom/mtcca/logo.svg",
+      title: "MTC Regional Transit Assessment",
+      role: "Data Scientist @ WSP",
+      description: "A reusable R `targets` pipeline that standardizes crash-data ETL, analysis, visualization, and reporting across transportation safety projects and study areas within Washington State.",
+      links: [],
+      href: "./project.html?name=mtc-transit-assessment"
+    },
+    {
       image: "images/orca-project2.png",
       title: "ORCAnalysis",
       role: "Research Engineer @ TRAC",
@@ -190,17 +238,17 @@ var portfolioContent = {
       ],
       href: "https://jolietran525.github.io/trac-conflation/"
     },
-    {
-      image: "images/geog328-project.png",
-      title: "2022 U.S Influenza Map",
-      role: "Web GIS Coursework",
-      description: "This map provides dashboards visualizing weekly and annually data of influenza cases in 2022.",
-      links: [
-        { icon: "fa-brands fa-github", href: "https://github.com/lquan02/geog328_flu_map" },
-        { icon: "fa-solid fa-map", href: "https://lquan02.github.io/geog328_flu_map/" }
-      ],
-      href: "https://lquan02.github.io/geog328_flu_map/"
-    }
+    // {
+    //   image: "images/geog328-project.png",
+    //   title: "2022 U.S Influenza Map",
+    //   role: "Web GIS Coursework",
+    //   description: "This map provides dashboards visualizing weekly and annually data of influenza cases in 2022.",
+    //   links: [
+    //     { icon: "fa-brands fa-github", href: "https://github.com/lquan02/geog328_flu_map" },
+    //     { icon: "fa-solid fa-map", href: "https://lquan02.github.io/geog328_flu_map/" }
+    //   ],
+    //   href: "https://lquan02.github.io/geog328_flu_map/"
+    // }
   ]
 };
 

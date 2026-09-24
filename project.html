@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Project | Jolie Tran's Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/magnific-popup.css">
+    <link rel="stylesheet" href="./css/aos.css">
+    <link rel="stylesheet" href="./css/ionicons.min.css">
+    <link rel="stylesheet" href="./css/flaticon.css">
+    <link rel="stylesheet" href="./css/icomoon.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/arcade.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+    <link rel="icon" href="./images/user-astronaut-solid.svg" type="image/x-icon">
+
+    <!-- Project-page-specific styles -->
+    <link rel="stylesheet" href="./css/project.css">
+  </head>
+
+  <body
+    data-spy="scroll"
+    data-target=".site-navbar-target"
+    data-offset="300"
+  >
+
+    <!-- =========================================================
+         ARCADE PROGRESS
+    ========================================================== -->
+
+    <div class="arcade-progress" aria-live="polite">
+      <div class="arcade-progress__label">
+        <span>PLAYER 01</span>
+        <span id="level-value">LVL 01</span>
+      </div>
+
+      <div class="arcade-progress__track">
+        <span id="xp-progress"></span>
+        <span id="xp-runner" aria-hidden="true">@</span>
+      </div>
+
+      <div class="arcade-progress__meta">
+        <span>
+          XP <strong id="xp-value">0000</strong> / 10000
+        </span>
+        <span id="scroll-percent">0%</span>
+      </div>
+    </div>
+
+
+    <!-- =========================================================
+         NAVBAR
+         Same structure as root index.html
+    ========================================================== -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target"
+      id="ftco-navbar"
+    >
+      <div class="container">
+
+        <div class="navbar-profile">
+          <a class="navbar-brand" href="./index.html">
+            Jolie Tran
+          </a>
+
+          <button
+            class="mode-switch"
+            id="mode-toggle"
+            type="button"
+            role="switch"
+            aria-checked="false"
+            aria-label="Personal mode"
+            title="Professional / Personal"
+          >
+            <svg
+              class="mode-switch__icon mode-switch__icon--pro"
+              viewBox="0 -0.5 11 10"
+              shape-rendering="crispEdges"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M3 0h5v1h-5zM3 1h1v1h-1zM7 1h1v1h-1zM0 2h11v1h-11zM0 3h11v1h-11zM0 4h11v1h-11zM4 5h3v1h-3zM0 6h11v1h-11zM0 7h11v1h-11zM0 8h11v1h-11z"/>
+            </svg>
+
+            <svg
+              class="mode-switch__icon mode-switch__icon--personal"
+              viewBox="0 -0.5 11 10"
+              shape-rendering="crispEdges"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M1 0h3v1h-3zM7 0h3v1h-3zM0 1h2v1h-2zM3 1h2v1h-2zM6 1h5v1h-5zM0 2h1v1h-1zM2 2h9v1h-9zM0 3h11v1h-11zM1 4h9v1h-9zM2 5h7v1h-7zM3 6h5v1h-5zM4 7h3v1h-3zM5 8h1v1h-1z"/>
+            </svg>
+          </button>
+        </div>
+
+        <button
+          class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="menu-arrow" aria-hidden="true"></span>
+          Menu
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+
+            <li class="nav-item active">
+              <a href="./index.html#projects-section" class="nav-link">
+                <span>SHOWCASE</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+
+
+    <!-- =========================================================
+        PROJECT PAGE
+    ========================================================== -->
+
+    <main class="project-page">
+
+    <div class="project-layout">
+
+        <!-- =======================================================
+            GLOBAL PROJECT SIDEBAR
+        ======================================================== -->
+
+        <aside class="project-toc">
+        
+        <div class="project-toc__title">
+            MISSION LOG
+        </div>
+
+        <nav class="project-toc__nav">
+
+            <a
+            href="#tldr-section"
+            class="project-toc__link active"
+            >
+            <span>01</span>
+            <span>TL;DR</span>
+            </a>
+
+            <a
+            href="#problem-section"
+            class="project-toc__link"
+            >
+            <span>02</span>
+            <span>PROBLEM</span>
+            </a>
+
+            <a
+            href="#thought-section"
+            class="project-toc__link"
+            >
+            <span>03</span>
+            <span>THOUGHT PROCESS</span>
+            </a>
+
+            <a
+            href="#solution-section"
+            class="project-toc__link"
+            >
+            <span>04</span>
+            <span>SOLUTION</span>
+            </a>
+
+            <a
+            href="#impact-section"
+            class="project-toc__link"
+            >
+            <span>05</span>
+            <span>IMPACT</span>
+            </a>
+
+            <a
+            href="#role-section"
+            class="project-toc__link"
+            >
+            <span>06</span>
+            <span>MY ROLE</span>
+            </a>
+
+        </nav>
+
+        </aside>
+
+
+        <!-- =======================================================
+            RIGHT SIDE: HERO + PROJECT CONTENT
+        ======================================================== -->
+
+        <div class="project-main">
+
+
+        <!-- =====================================================
+            PROJECT HERO
+        ====================================================== -->
+
+        <section class="project-hero">
+
+            <div class="project-hero__content">
+
+    
+            <span class="project-eyebrow" id="project-category" ></span>
+
+            <h1 id="project-title"></h1>
+
+            <p
+                class="project-subtitle"
+                id="project-subtitle"
+            ></p>
+
+            <div
+                class="project-tags"
+                id="project-tags"
+            ></div>
+
+            <div
+                class="project-notice"
+                id="project-notice"
+            >
+
+                <strong>
+                PROPRIETARY PROJECT
+                </strong>
+
+                <span>
+                Developed as part of my professional work.
+                Source code, datasets, and client-specific
+                implementation details cannot be publicly shared.
+                </span>
+
+            </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+            TL;DR
+        ====================================================== -->
+
+        <section class="project-section"  id="tldr-section" >
+
+            <div class="container">
+
+                <div class="project-section__label"> [ TL;DR ] </div>
+
+                <div class="project-content" id="project-tldr"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+            PROBLEM
+        ====================================================== -->
+
+        <section class="project-section project-section--alternate" id="problem-section">
+
+            <div class="container">
+
+            <div class="project-section__label"> [ PROBLEM ] </div>
+
+            <div class="project-content--alternate" id="project-problem"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+            THOUGHT PROCESS
+        ====================================================== -->
+
+        <section
+            class="project-section"
+            id="thought-section"
+        >
+
+            <div class="container">
+
+            <div class="project-section__label">[ THOUGHT PROCESS ] </div>
+
+            <div class="project-content" id="project-thought" ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+            SOLUTION
+        ====================================================== -->
+
+        <section
+            class="project-section project-section--alternate"
+            id="solution-section"
+        >
+
+            <div class="container">
+
+            <div class="project-section__label"> [ SOLUTION ] </div>
+
+            <div class="project-content--alternate" id="project-solution" ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+            IMPACT
+        ====================================================== -->
+
+        <section class="project-section" id="impact-section" >
+
+            <div class="container">
+                <div class="project-section__label"> [ IMPACT ] </div>
+                <div class="project-impact" id="project-impact" ></div>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+            MY ROLE
+        ====================================================== -->
+
+        <section class="project-section" id="role-section">
+            <div class="container">
+                <div class="project-section__label">[ MY ROLE ]</div>
+                <div class="project-content" id="project-role"></div>
+            </div>
+        </section>
+
+
+        </div>
+        <!-- END .project-main -->
+
+    </div>
+    <!-- END .project-layout -->
+
+
+    </main>
+
+
+    <!-- =========================================================
+         EXISTING PORTFOLIO JS
+    ========================================================== -->
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.1.3.js"></script>
+    <script src="./js/jquery.waypoints.min.js"></script>
+    <script src="./js/jquery.stellar.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/jquery.animateNumber.min.js"></script>
+    <script src="./js/scrollax.min.js"></script>
+
+    <!-- Your existing portfolio behavior -->
+    <script src="./js/main.js"></script>
+
+
+    <!-- =========================================================
+         PROJECT LOADER
+    ========================================================== -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async function () {
+
+        const params = new URLSearchParams(window.location.search);
+        const projectName = params.get("name");
+
+        if (!projectName) {
+          showProjectError("NO PROJECT SPECIFIED");
+          return;
+        }
+
+        /*
+         * Example:
+         *
+         * /projects/project.html?name=synchro-processor
+         *
+         * becomes:
+         *
+         * ./js/projects/synchro-processor.js
+         */
+
+        const projectPath =
+          "./js/projects/" +
+          encodeURIComponent(projectName) +
+          ".js";
+
+        try {
+
+          const response = await fetch(projectPath, {
+            method: "GET",
+            cache: "no-cache"
+          });
+
+          if (!response.ok) {
+            throw new Error(
+              "Project file not found: " + projectName
+            );
+          }
+
+          const javascript = await response.text();
+
+          /*
+           * Project JS files are expected to define:
+           *
+           * const projectData = {...}
+           *
+           * We load the file dynamically and then retrieve
+           * projectData from the global scope.
+           */
+
+          const script = document.createElement("script");
+
+          script.textContent = javascript;
+
+          document.body.appendChild(script);
+
+          /*
+           * projectData is now available.
+           */
+
+          if (
+            typeof projectData === "undefined"
+          ) {
+            throw new Error(
+              "projectData was not defined by " +
+              projectName +
+              ".js"
+            );
+          }
+
+          renderProject(projectData);
+
+        } catch (error) {
+
+          console.error(error);
+
+          showProjectError(
+            "PROJECT NOT FOUND: " +
+            projectName.toUpperCase()
+          );
+        }
+      });
+
+
+      /*
+       * ========================================================
+       * RENDER PROJECT
+       * ========================================================
+       */
+
+      function renderProject(project) {
+
+        document.title =
+          project.title +
+          " | Jolie Tran's Portfolio";
+
+
+        // HERO
+
+        setText(
+          "project-category",
+          project.category
+        );
+
+        setText(
+          "project-title",
+          project.title
+        );
+
+        setText(
+          "project-subtitle",
+          project.subtitle
+        );
+
+
+        // TAGS
+
+        const tags =
+          document.getElementById(
+            "project-tags"
+          );
+
+        if (
+          tags &&
+          Array.isArray(project.tags)
+        ) {
+
+          tags.innerHTML =
+            project.tags
+              .map(function (tag) {
+
+                return `
+                  <span class="project-tag">
+                    ${tag}
+                  </span>
+                `;
+
+              })
+              .join("");
+        }
+
+
+        // PROPRIETARY NOTICE
+
+        const notice =
+          document.getElementById(
+            "project-notice"
+          );
+
+        if (notice) {
+
+          notice.style.display =
+            project.proprietary === false
+              ? "none"
+              : "flex";
+        }
+
+
+        // CONTENT
+
+        setHTML(
+          "project-tldr",
+          project.tldr
+        );
+
+        setHTML(
+          "project-problem",
+          project.problem
+        );
+
+        setHTML(
+          "project-thought",
+          project.thoughtProcess
+        );
+
+        setHTML(
+          "project-solution",
+          project.solution
+        );
+
+        setHTML(
+          "project-role",
+          project.role
+        );
+
+
+        // IMPACT
+
+        const impact =
+          document.getElementById(
+            "project-impact"
+          );
+
+        if (
+          impact &&
+          Array.isArray(project.impact)
+        ) {
+
+          impact.innerHTML =
+            project.impact
+              .map(function (item) {
+
+                return `
+                  <div class="impact-card">
+
+                    <div class="impact-card__value">
+                      ${item.value}
+                    </div>
+
+                    <div class="impact-card__label">
+                      ${item.label}
+                    </div>
+
+                  </div>
+                `;
+
+              })
+              .join("");
+        }
+
+
+        // PREVIOUS / NEXT
+
+        renderNavigation(
+          "previous-project",
+          "previous-project-title",
+          project.previous
+        );
+
+        renderNavigation(
+          "next-project",
+          "next-project-title",
+          project.next
+        );
+
+
+        // PROJECT PROGRESS
+
+        setupProjectProgress();
+
+        // TABLE OF CONTENTS
+
+        setupProjectTOC();
+      }
+
+
+      /*
+       * ========================================================
+       * HELPERS
+       * ========================================================
+       */
+
+      function setText(id, value) {
+
+        const element =
+          document.getElementById(id);
+
+        if (element) {
+          element.textContent =
+            value || "";
+        }
+      }
+
+
+      function setHTML(id, value) {
+
+        const element =
+          document.getElementById(id);
+
+        if (element) {
+          element.innerHTML =
+            value || "";
+        }
+      }
+
+
+      function renderNavigation(
+        linkId,
+        titleId,
+        project
+      ) {
+
+        const link =
+          document.getElementById(linkId);
+
+        const title =
+          document.getElementById(titleId);
+
+        if (!project) {
+
+          if (link) {
+            link.style.visibility =
+              "hidden";
+          }
+
+          return;
+        }
+
+        if (link) {
+
+          link.href =
+            "?name=" +
+            encodeURIComponent(
+              project.id
+            );
+        }
+
+        if (title) {
+
+          title.textContent =
+            project.title;
+        }
+      }
+
+
+      function showProjectError(message) {
+
+        document.getElementById(
+          "project-category"
+        ).textContent = "ERROR";
+
+        document.getElementById(
+          "project-title"
+        ).textContent = message;
+
+        document.getElementById(
+          "project-subtitle"
+        ).textContent =
+          "Return to the showcase and select a project.";
+
+        document.getElementById(
+          "project-notice"
+        ).style.display = "none";
+      }
+
+
+      /*
+       * ========================================================
+       * XP / SCROLL PROGRESS
+       * ========================================================
+       */
+
+      function setupProjectProgress() {
+
+        const progress =
+          document.getElementById(
+            "xp-progress"
+          );
+
+        const runner =
+          document.getElementById(
+            "xp-runner"
+          );
+
+        const percent =
+          document.getElementById(
+            "scroll-percent"
+          );
+
+        const xp =
+          document.getElementById(
+            "xp-value"
+          );
+
+        if (
+          !progress ||
+          !runner ||
+          !percent ||
+          !xp
+        ) {
+          return;
+        }
+
+
+        function updateProgress() {
+
+          const maxScroll =
+            document.documentElement
+              .scrollHeight -
+            window.innerHeight;
+
+          const value =
+            maxScroll > 0
+              ? Math.min(
+                  100,
+                  Math.max(
+                    0,
+                    (
+                      window.scrollY /
+                      maxScroll
+                    ) * 100
+                  )
+                )
+              : 0;
+
+          progress.style.width =
+            value + "%";
+
+          runner.style.left =
+            value + "%";
+
+          percent.textContent =
+            Math.round(value) + "%";
+
+          xp.textContent =
+            String(
+              Math.round(
+                value * 100
+              )
+            ).padStart(
+              4,
+              "0"
+            );
+        }
+
+
+        window.addEventListener(
+          "scroll",
+          updateProgress,
+          {
+            passive: true
+          }
+        );
+
+        updateProgress();
+      }
+
+      /*
+        * ========================================================
+        * PROJECT TABLE OF CONTENTS
+        * ========================================================
+        */
+
+        function setupProjectTOC() {
+
+        const links =
+            document.querySelectorAll(
+            ".project-toc__link"
+            );
+
+        const sections =
+            document.querySelectorAll(
+            ".project-main .project-section"
+            );
+
+        if (
+            !links.length ||
+            !sections.length
+        ) {
+            return;
+        }
+
+
+        function setActiveSection(id) {
+
+            links.forEach(function (link) {
+
+            link.classList.toggle(
+                "active",
+                link.getAttribute("href") === "#" + id
+            );
+
+            });
+        }
+
+
+        const observer =
+            new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
+
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                setActiveSection(
+                    entry.target.id
+                );
+
+                });
+
+            },
+            {
+                rootMargin:
+                "-20% 0px -65% 0px",
+
+                threshold: 0
+            }
+            );
+
+
+        sections.forEach(function (section) {
+
+            observer.observe(section);
+
+        });
+
+
+        /*
+        * Smooth scrolling
+        */
+
+        links.forEach(function (link) {
+
+            link.addEventListener(
+            "click",
+            function (event) {
+
+                const targetId =
+                this.getAttribute("href");
+
+                const target =
+                document.querySelector(
+                    targetId
+                );
+
+                if (!target) {
+                return;
+                }
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+                });
+
+            }
+            );
+
+        });
+
+        }
+
+    </script>
+
+  </body>
+</html>
